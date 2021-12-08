@@ -1,0 +1,16 @@
+#include<stdio.h>
+int main()
+{
+    int n,w,y,k,r;
+    scanf("%d",&n);
+    y=n/365;
+    printf("year %d\n",y);
+    r=n%365;
+    k=r;
+    k=r/7;
+    printf("week %d\n",k);
+    r=r%7;
+    printf("days %d\n",r);
+    
+return(0);
+}
