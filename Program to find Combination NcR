@@ -1,0 +1,17 @@
+#include<stdio.h>
+int main()
+{
+int n,r,res;
+int factorial(int);
+scanf("%d",&n);
+scanf("%d",&r);
+res=(factorial (n)/(factorial (r)*factorial(n-r)));
+printf("%d",res);
+return(0);
+}
+int factorial(int n){
+int i,value=1;
+for(i=1;i<=n;i++)
+value=value*i;
+return(value);
+}
