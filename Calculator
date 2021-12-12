@@ -1,0 +1,40 @@
+#include<stdio.h>
+#include<conio.h>
+int main()
+{
+int num1,num2,exp,sum;
+clrscr();
+printf("Enter the first number\n");
+scanf("%d",&num1);
+printf("Enter the second number\n");
+scanf("%d",&num2);
+printf("\nSelect the operation");
+printf("\n\n Press-1 Addtition");
+printf("\n\n Press-2 Substraction");
+printf("\n\n Press-3 Multiplication");
+printf("\n\n Press-4 Division\n");
+scanf("%d",&exp);
+if(exp==1)
+{
+sum=num1+num2;
+printf("\nThe sum of the given number is:%d",sum);
+}
+else if(exp==2)
+{
+sum=num1-num2;
+printf("\nThe difference of the given number is:%d",sum);
+}
+else if(exp==3)
+{
+sum=num1*num2;
+printf("\nThe product of the given number is:%d",sum);
+}
+else if(exp==4)
+{
+sum=num1/num2;
+printf("\nThe division of the given number is:%d",sum);
+}
+else
+printf("\n\n\nError! Please enter the corect input");
+return(0);
+}
