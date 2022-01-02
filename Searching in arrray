@@ -1,0 +1,30 @@
+#include<stdio.h>
+#include<conio.h>
+int main()
+{
+int search(int[],int,int);     //prototype
+int a[6]={2,3,4,5,67,8};
+int n,loc;                     //n=number u want to search,loc== location at which the number is present, 
+clrscr();
+printf("enter the number:  ");
+scanf("%d",&n);
+loc=search(a,n,6);             //calling the search function.(array name,number,size)
+if(loc==-1)
+printf("Element not found");
+else
+printf("Element %d  found at %d ",n,loc);
+return 0;
+}
+
+
+int search(int a[],int n,int size)             //defining the function (array name,number you want to search,size of the array)
+{
+int i;
+for(i=0;i<size;i++)
+{
+if(a[i]==n)
+return i;
+}
+if(i==size)
+return -1;
+}
