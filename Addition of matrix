@@ -1,0 +1,68 @@
+#include<stdio.h>
+#include<conio.h>
+int main()
+{
+int i,sum[10][10],j,r,c;
+int a[10][10];
+int b[10][10];
+clrscr();
+printf("enter the number of rows: ");
+scanf("%d",&r);
+printf("Enter the number of coloumn: ");
+scanf("%d",&c);
+printf("Element of the matrix A:\n\n");
+for(i=0;i<r;i++)
+{
+	for(j=0;j<c;j++)
+	{
+	printf("Enter the element at %d %d",i,j);
+	scanf("%d",&a[i][j]);
+	}
+}
+for(i=0;i<r;i++)
+{
+	for(j=0;j<c;j++)
+	{
+	printf("%d ",a[i][j]);
+	}
+	printf("\n");
+}
+
+printf("Element of the matrix B:\n\n");
+for(i=0;i<r;i++)
+{
+	for(j=0;j<c;j++)
+	{
+	printf("Enter the element at %d %d",i,j);
+	scanf("%d",&b[i][j]);
+	}
+}
+for(i=0;i<r;i++)
+{
+	for(j=0;j<c;j++)
+	{
+	printf("%d ",b[i][j]);
+	}
+	printf("\n");
+}
+{
+for(i=0;i<r;i++)
+{
+	for(j=0;j<c;j++)
+		{
+		sum[i][j]=a[i][j]+b[i][j];
+		}
+}
+for(i=0;i<r;i++)
+{
+	for(j=0;j<c;j++)
+	{
+	printf("%d ",sum[i][j]);
+	}
+	printf("\n");
+}
+}
+
+return 0;
+
+}
