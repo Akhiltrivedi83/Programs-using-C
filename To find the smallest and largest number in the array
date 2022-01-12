@@ -1,0 +1,41 @@
+#include<stdio.h>
+int main()
+{
+    int arr[100],n,i,pass,j,temp;
+    
+    printf("Enter the number of elements in the array:");
+    scanf("%d",&n);
+    
+    for(i=0;i<n;i++)
+    {
+        scanf("%d",&arr[i]);
+    }
+    for(pass=1;pass<n;pass++)
+    {
+        for(j=0;j<n-pass;j++)
+        {
+            if(arr[j]>arr[j+1])
+            {
+                temp=arr[j];
+                arr[j]=arr[j+1];
+                arr[j+1]=temp;
+            }
+            
+        }
+            
+        
+    }
+
+    {
+        printf("The maximum number of the array is:");
+        printf("%d\n",arr[n-1]);
+        printf("The minimum number of the array is:");
+        printf("%d",arr[0]);
+    }
+        
+        
+    
+    
+    return 0;
+    
+}
