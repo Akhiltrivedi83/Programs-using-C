@@ -40,7 +40,7 @@ int main()
 int main()
 {
     int arr[100]={23,56,22,86,35,76};
-    int n=6,i,temp;
+    int n=6,i;
     for(i=0;i<n;i++)
     {
         printf("%d ",arr[i]);
