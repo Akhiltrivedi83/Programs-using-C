@@ -28,3 +28,24 @@ int main()
     }
     return 0;
 }
+
+
+//Alternate and simple method.
+
+
+
+
+
+#include<stdio.h>
+int main()
+{
+    int arr[100]={23,56,22,86,35,76};
+    int n=6,i,temp;
+    for(i=0;i<n;i++)
+    {
+        printf("%d ",arr[i]);
+    }
+    printf("\n");
+    
+    return 0;
+}
