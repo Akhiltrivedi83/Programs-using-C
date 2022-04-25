@@ -1,0 +1,74 @@
+#include<stdio.h>
+#include<stdlib.h>
+/*void insert_at_beg(node **head,int c,int p);
+{
+    node *temp;
+    temp=(node *)malloc(sizeof(node));
+    temp->coef=c;
+    temp->power=p;
+    temp->next=*head;
+    *head=temp;
+}
+void traverse(node* head)
+{
+    while(*head!=NULL){
+        printf("%dx^%d",head->coef,head->power);
+        head=head->next;
+    }
+}*/
+typedef struct polynomial{
+    int coef;
+    int power;
+    struct polynomial *next;
+}node;
+
+int main()
+{
+   // void insert_at_beg(node**,int,int);
+//void traverse(node*);
+    node *head=NULL;
+    int c,p,deg,i;
+    printf("Enter the degree of polynomial: ");
+    scanf("%d",&deg);
+    for(i=0;i<deg;i++)
+    {
+        printf("Enter the coefficient:");
+        scanf("%d",&c);
+        printf("Enter the power:");
+        scanf("%d",&p);
+   //     insert_at_beg(&head,c,p);
+      node *temp;
+        temp=(node *)malloc(sizeof(node));
+        temp->coef=c;
+        temp->power=p;
+        temp->next=head;
+        head=temp;
+    }
+     while(head!=NULL){
+        printf("%dx^%d+",head->coef,head->power);
+        head=head->next;
+    }
+     printf("\nEnter the degree of SECOND  polynomial: ");
+    scanf("%d",&deg);
+    for(i=0;i<deg;i++)
+    {
+        printf("Enter the coefficient:");
+        scanf("%d",&c);
+        printf("Enter the power:");
+        scanf("%d",&p);
+   //     insert_at_beg(&head,c,p);
+      node *temp;
+        temp=(node *)malloc(sizeof(node));
+        temp->coef=c;
+        temp->power=p;
+        temp->next=head;
+        head=temp;
+    }
+     while(head!=NULL){
+        printf("%dx^%d+",head->coef,head->power);
+        head=head->next;
+    }
+
+   // traverse(head);
+return 0;
+}
