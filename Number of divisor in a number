@@ -1,0 +1,23 @@
+#include<stdio.h>
+int main()
+{
+    int n,k,count=0,r,t;
+    scanf("%d",&t);
+    while(t>0)
+    {
+    scanf("%d",&n);
+    k=n;
+    while(n>0)
+    {
+        r=n%10;
+        if(r>0&&k%r==0)
+        {
+            count++;
+        }
+        n=n/10;
+    }
+    printf("%d\n",count);
+    count=0;
+    t--;
+    }
+}
